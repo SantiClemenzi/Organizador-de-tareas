@@ -9,7 +9,8 @@ const Header = () => {
 		<header className="header">
 			<h1 className="header__tittle">Lista de tareas</h1>
 			<button className="header__boton">
-				ocultar tareas hechas <FontAwesomeIcon icon={faEyeSlash} className='header__icono-boton'/>
+				ocultar tareas hechas
+				<FontAwesomeIcon icon={faEyeSlash} className="header__icono-boton" />
 			</button>
 		</header>
 	);
