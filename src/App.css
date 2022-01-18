@@ -111,7 +111,8 @@
 	width: 100%;
 }
 
-.lista-tareas__tarea:hover .lista-tareas__icono-accion {
+.lista-tareas__tarea:hover 
+.lista-tareas__icono-accion {
 	opacity: 0.5;
 }
 
