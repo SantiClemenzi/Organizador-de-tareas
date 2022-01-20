@@ -10,7 +10,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 
 // creamos la estructura de cada tarea
-const Tarea = ({ tarea, toggleCompletada, upDateTarea, eliminarTarea}) => {
+const Tarea = ({ tarea, toggleCompletada, upDateTarea, eliminarTarea }) => {
 	// hook para ejecutar el form
 	const [editandoTarea, cambiarEditandoTarea] = useState(false);
 
@@ -20,17 +20,14 @@ const Tarea = ({ tarea, toggleCompletada, upDateTarea, eliminarTarea}) => {
 	// funcion evitar el refrecamiento de la pagiana
 	const handleSubmit = (e) => {
 		e.preventDefault();
-		// funcion para cargar la nueva tarea
-        upDateTarea(tarea.id, nuevaTarea);
+		upDateTarea(tarea.id, nuevaTarea); // funcion para cargar la nueva tarea
 		cambiarEditandoTarea(false);
 	};
 	return (
 		<li className="lista-tareas__tarea">
 			<FontAwesomeIcon
-				// creamos condicional para que el icono cambie
-				icon={tarea.completada ? faCheckSquare : faSquare}
-				// ejecutamos la funcion toggleCompletada
-				onClick={() => toggleCompletada(tarea.id)}
+				icon={tarea.completada ? faCheckSquare : faSquare} // creamos condicional para que el icono cambie
+				onClick={() => toggleCompletada(tarea.id)} // ejecutamos la funcion toggleCompletada
 				className="lista-tareas__icono lista-tareas__icono-check"
 			/>
 			<div className="lista-tareas__texto">
@@ -45,10 +42,8 @@ const Tarea = ({ tarea, toggleCompletada, upDateTarea, eliminarTarea}) => {
 							<input
 								type="text"
 								className="formulario-editar-tarea__input "
-								// establecemos una variable en el value para que sea dinamico
-								value={nuevaTarea}
-								// funcion que va a modificar el input
-								onChange={(e) => cambiarNuevaTarea(e.target.value)}
+								value={nuevaTarea} // establecemos una variable en el value para que sea dinamico
+								onChange={(e) => cambiarNuevaTarea(e.target.value)} // funcion que va a modificar el input
 							></input>
 							<button type="submit" className="formulario-editar-tarea__btn">
 								Actualizar
@@ -62,14 +57,13 @@ const Tarea = ({ tarea, toggleCompletada, upDateTarea, eliminarTarea}) => {
 			<div className="lista-tareas__contenedor-botones">
 				<FontAwesomeIcon
 					icon={faEdit}
-					// ejecutamos funcion para activar el form
-					onClick={() => cambiarEditandoTarea(!editandoTarea)}
+					onClick={() => cambiarEditandoTarea(!editandoTarea)} // ejecutamos funcion para activar el form
 					className="lista-tareas__texto lista-tareas__icono-accion"
 				/>
 
 				<FontAwesomeIcon
 					icon={faTimes}
-					onClick={() => eliminarTarea(tarea.id)}
+					onClick={() => eliminarTarea(tarea.id)} //ejecutamos funcion para activar el from
 					className="lista-tareas__texto lista-tareas__icono-accion"
 				/>
 			</div>

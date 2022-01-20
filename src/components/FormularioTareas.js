@@ -32,7 +32,7 @@ const FormularioTareas = ({ tareas, agregarTareas }) => {
 		<form action="" className="formulario-tareas" onSubmit={handleSubmit}>
 			<input
 				type="text"
-				placeholder="escribe una tarea"
+				placeholder="Escribe una tarea"
 				className="formulario-tareas__input"
 				value={inputTarea}
 				onChange={(e) => handleInput(e)}

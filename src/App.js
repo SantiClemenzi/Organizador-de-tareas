@@ -8,14 +8,23 @@ import ListaTareas from './components/ListaTarea';
 const App = () => {
 	// en este hook se van a guardar todas las tareas
 	const [tareas, agregarTareas] = useState([]);
-	// imprimimos las tareas por consola
-	console.log(tareas);
 
+	// hook para mostrar tareas completadas o no
+	const [mostrarCompletadas, cambiarMostrarCompletadas] = useState(false);
 	return (
 		<div className="contenedor">
-			<Header />
+			<Header
+				cambiarMostrarCompletadas={cambiarMostrarCompletadas}
+				mostrarCompletadas={mostrarCompletadas}
+			/>
+
 			<FormularioTareas tareas={tareas} agregarTareas={agregarTareas} />
-			<ListaTareas tareas={tareas} agregarTareas={agregarTareas}/>
+
+			<ListaTareas
+				tareas={tareas}
+				agregarTareas={agregarTareas}
+				mostrarCompletadas={mostrarCompletadas}
+			/>
 		</div>
 	);
 };
