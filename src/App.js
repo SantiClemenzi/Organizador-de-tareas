@@ -15,7 +15,7 @@ const App = () => {
 		<div className="contenedor">
 			<Header />
 			<FormularioTareas tareas={tareas} agregarTareas={agregarTareas} />
-			<ListaTareas tareas={tareas}/>
+			<ListaTareas tareas={tareas} agregarTareas={agregarTareas}/>
 		</div>
 	);
 };

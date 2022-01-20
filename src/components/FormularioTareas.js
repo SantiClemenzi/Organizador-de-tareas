@@ -1,9 +1,12 @@
 // importamos el hook useState
 import { useState } from 'react';
+
 // importamos el modulo de id aleatorio
 import { v4 as uuidv4 } from 'uuid';
+
 // importamos el Font awsome
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 // importamos el icono
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons';
 
@@ -15,6 +18,7 @@ const FormularioTareas = ({ tareas, agregarTareas }) => {
 	const handleInput = (e) => {
 		inputAgregarTarea(e.target.value);
 	};
+
 	// agregamos la nueva tarea al array
 	const handleSubmit = (e) => {
 		// el prevent default evita que se recargue la pagina
