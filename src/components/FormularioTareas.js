@@ -27,6 +27,7 @@ const FormularioTareas = ({ tareas, agregarTareas }) => {
 			...tareas,
 			{ id: uuidv4(), texto: inputTarea, completada: false },
 		]);
+		inputAgregarTarea('');
 	};
 	return (
 		<form action="" className="formulario-tareas" onSubmit={handleSubmit}>
